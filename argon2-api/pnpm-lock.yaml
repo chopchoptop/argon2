@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@choptop/argon2':
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.4
+        version: 0.0.4
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -242,8 +242,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@choptop/argon2@0.0.3':
-    resolution: {integrity: sha512-u3hnwq8wIMXyJG4noh9FKJlXVqcQyVjC2xQWt6sLC6RM+JN/LK0iR2UF989vnnylpwLntXX0yN+aav7L4xOXEg==}
+  '@choptop/argon2@0.0.4':
+    resolution: {integrity: sha512-iQ2ehtooDJxurRe18VfRYdJbcjaJGZrgMq8Kz03VXjtminhPnOknbcRoLIriIw9BOvHIdIbjUcSlRj6QwZoHmQ==}
 
   '@eslint-community/eslint-utils@4.4.0':
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -2074,7 +2074,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@choptop/argon2@0.0.3': {}
+  '@choptop/argon2@0.0.4': {}
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
     dependencies:

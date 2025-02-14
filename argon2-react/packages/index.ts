@@ -19,4 +19,4 @@ export const hash: (password: string, salt: string) => Promise<string> = _hash;
  * * `password` - password
  * * `salt` - salt
  */
-export const verify: (password: string, hash: string, salt: string) => Promise<void> = _verify;
+export const verify: (hashed: string, password: string, salt: string) => Promise<void> = _verify;
