@@ -31,8 +31,10 @@ type MessageResult<T, E> = { ok: T; err?: undefined } | { ok?: undefined; err: E
 export const hash = async (password: string, salt: string): Promise<string> => {
     await initializing;
     const json: MessageResult<string, string> = JSON.parse(argon2.hash(password, salt));
-    if (json.err !== undefined) throw new Error(json.err);
-    return json.ok;
+    return new Promise<string>((resolve, reject) => {
+        if (json.err !== undefined) reject(new Error(json.err));
+        else resolve(json.ok);
+    });
 };
 
 // ================ verify ================
@@ -46,8 +48,11 @@ export const hash = async (password: string, salt: string): Promise<string> => {
  * * `password` - password
  * * `salt` - salt
  */
-export const verify = async (hashed: string, password: string, salt: string): Promise<void> => {
+export const verify = async (hashed: string, password: string, salt: string): Promise<boolean> => {
     await initializing;
     const json: MessageResult<string, string> = JSON.parse(argon2.verify(hashed, password, salt));
-    if (json.err !== undefined) throw new Error(json.err);
+    return new Promise<boolean>((resolve, reject) => {
+        if (json.err !== undefined) reject(new Error(json.err));
+        else resolve(true);
+    });
 };
