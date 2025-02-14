@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "bindgen",
+        "cdylib",
+        "choptop",
+        "clippy",
+        "codegen",
+        "getrandom",
+        "rlib",
+        "rustdoc",
+        "serde"
+    ]
+}

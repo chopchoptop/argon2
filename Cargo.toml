@@ -1,0 +1,43 @@
+[package]
+name = "argon2"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true        # Used to enable link time optimization
+opt-level = 'z'   # Optimization Level
+codegen-units = 1 # Use the highest level of optimization throughout the entire Crate
+strip = true      # Dipping the debugging information and reduce the output size
+
+[lints.rust]
+unsafe_code = "forbid"
+unreachable_pub = "deny"
+missing_docs = "warn"
+
+[lints.rustdoc]
+broken_intra_doc_links = "warn"
+
+[lints.clippy]
+future_not_send = "warn"
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = true
+
+[dependencies]
+wasm-bindgen = "0.2.99"
+serde = { version = "1.0.216", features = ["derive"] }
+serde_json = "1.0.133"
+rand_core = { version = "0.6", features = ["getrandom"] }
+argon2 = "0.5"
+getrandom = { version = "0.2.15", features = ["js"] }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.49"
