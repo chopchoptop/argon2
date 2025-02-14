@@ -27,10 +27,10 @@ export const hash = async (password: string, salt: string): Promise<string> => {
     return json.ok;
 };
 
-// ================ validate ================
+// ================ verify ================
 
-export const validate = async (password: string, hash: string, salt: string): Promise<void> => {
+export const verify = async (password: string, hash: string, salt: string): Promise<void> => {
     await initializing;
-    const json: MessageResult<string, string> = JSON.parse(argon2.validate(password, hash, salt));
+    const json: MessageResult<string, string> = JSON.parse(argon2.verify(password, hash, salt));
     if (json.err !== undefined) throw new Error(json.err);
 };

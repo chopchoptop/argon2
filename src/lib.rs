@@ -79,13 +79,13 @@ fn inner_hash(password: &str, salt: &str) -> Result<String, String> {
 /// * `password` - password
 /// * `salt` - salt
 #[wasm_bindgen]
-pub fn validate(password: &str, hash: &str, salt: &str) -> String {
-    let result = inner_validate(password, hash, salt);
+pub fn verify(password: &str, hash: &str, salt: &str) -> String {
+    let result = inner_verify(password, hash, salt);
     let result: JellyResult = result.into();
     result.into()
 }
 
-fn inner_validate(password: &str, hash: &str, salt: &str) -> Result<String, String> {
+fn inner_verify(password: &str, hash: &str, salt: &str) -> Result<String, String> {
     use argon2::{Argon2, PasswordHash, PasswordVerifier};
 
     let parsed_hash = PasswordHash::new(hash).map_err(|e| format!("{e:?}"))?;
