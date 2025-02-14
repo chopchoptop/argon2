@@ -1,0 +1,60 @@
+{
+    "name": "@choptop/argon2-react",
+    "version": "0.0.1",
+    "private": false,
+    "description": "",
+    "author": "",
+    "keywords": [],
+    "main": "lib/index.umd.js",
+    "module": "lib/index.es.js",
+    "typings": "lib/index.d.ts",
+    "files": [
+        "lib/**/*"
+    ],
+    "type": "module",
+    "scripts": {
+        "dev": "vite --port=5000",
+        "build": "tsc -b && vite build -c vite.frontend.config.ts",
+        "package": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "buffer": "^6.0.3",
+        "lodash": "^4.17.21"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+        "@choptop/argon2-api": "^0.0.1",
+        "@types/lodash": "^4.17.13",
+        "@types/node": "^22.10.0",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "@vitejs/plugin-react-swc": "^3.7.2",
+        "autoprefixer": "^10.4.20",
+        "eslint": "^9.15.0",
+        "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+        "eslint-plugin-react-refresh": "^0.4.14",
+        "globals": "^15.12.0",
+        "postcss": "^8.4.49",
+        "prettier": "^3.4.1",
+        "prettier-plugin-tailwindcss": "^0.6.9",
+        "react-router-dom": "^7.0.1",
+        "sass": "^1.81.0",
+        "stylelint": "^16.10.0",
+        "stylelint-config-prettier-scss": "^1.0.0",
+        "stylelint-config-standard": "^36.0.1",
+        "stylelint-config-standard-scss": "^13.1.0",
+        "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+        "tailwindcss": "^3.4.15",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.16.0",
+        "vite": "^6.0.0",
+        "vite-plugin-dts": "^4.3.0"
+    }
+}
