@@ -1,6 +1,6 @@
 {
     "name": "@choptop/argon2-react",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "private": false,
     "description": "",
     "author": "",
@@ -20,7 +20,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@choptop/argon2-api": "^0.0.2",
+        "@choptop/argon2-api": "^0.0.3",
         "buffer": "^6.0.3",
         "lodash": "^4.17.21"
     },

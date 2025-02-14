@@ -33,7 +33,7 @@ impl From<JellyResult> for String {
 
 // ===================== hash password =====================
 
-/// hash password code
+/// hash password
 ///
 /// # Arguments
 ///
@@ -70,25 +70,26 @@ fn inner_hash(password: &str, salt: &str) -> Result<String, String> {
     Ok(hash)
 }
 
-// ===================== hash password =====================
+// ===================== verify password =====================
 
-/// hash password code
+/// verify password
 ///
 /// # Arguments
 ///
+/// * `hashed` - hashed password
 /// * `password` - password
 /// * `salt` - salt
 #[wasm_bindgen]
-pub fn verify(password: &str, hash: &str, salt: &str) -> String {
-    let result = inner_verify(password, hash, salt);
+pub fn verify(hashed: &str, password: &str, salt: &str) -> String {
+    let result = inner_verify(hashed, password, salt);
     let result: JellyResult = result.into();
     result.into()
 }
 
-fn inner_verify(password: &str, hash: &str, salt: &str) -> Result<String, String> {
+fn inner_verify(hashed: &str, password: &str, salt: &str) -> Result<String, String> {
     use argon2::{Argon2, PasswordHash, PasswordVerifier};
 
-    let parsed_hash = PasswordHash::new(hash).map_err(|e| format!("{e:?}"))?;
+    let hashed = PasswordHash::new(hashed).map_err(|e| format!("{e:?}"))?;
 
     let _argon2 = Argon2::new_with_secret(
         salt.as_bytes(),
@@ -99,7 +100,7 @@ fn inner_verify(password: &str, hash: &str, salt: &str) -> Result<String, String
     .map_err(|e| format!("{e:?}"))?;
 
     _argon2
-        .verify_password(password.as_bytes(), &parsed_hash)
+        .verify_password(password.as_bytes(), &hashed)
         .map_err(|e| format!("{e:?}"))?;
     Ok("true".to_string())
 }

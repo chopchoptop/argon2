@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@choptop/argon2-api':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
@@ -145,11 +145,11 @@ packages:
     resolution: {integrity: sha512-eUuWapzEGWFEpHFxgEaBG8e3n6S8L3MSu0oda755rOfabWPnh0Our1AozNFVUxGFIhbKgd1ksprsoDGMinTOTA==}
     engines: {node: '>=6.9.0'}
 
-  '@choptop/argon2-api@0.0.2':
-    resolution: {integrity: sha512-X3wkiBonDh1o+bsjqJLN5dfFEaH7e6jeAatx4jvEhN5ChOKESGWZMtNokbVCNPvOAsujEEd+TqpbhuGpnnI0Ww==}
+  '@choptop/argon2-api@0.0.3':
+    resolution: {integrity: sha512-e5xi1MNnLQXPtfjeqXocLMSrO2VQaJ4dmutk4TJBWtj0QX2cycBnXULi3yORODStGuVhfbxVZN/scQSq3HhC4g==}
 
-  '@choptop/argon2@0.0.2':
-    resolution: {integrity: sha512-dAK6L6bpywJsFr5jZkM9i6mK5YKrOXikkr1J2XSzyfxdov9LMcZ6y1OP7ArNaqGUq/dEzZ/Sj/iFp/dhV8Vn1w==}
+  '@choptop/argon2@0.0.3':
+    resolution: {integrity: sha512-u3hnwq8wIMXyJG4noh9FKJlXVqcQyVjC2xQWt6sLC6RM+JN/LK0iR2UF989vnnylpwLntXX0yN+aav7L4xOXEg==}
 
   '@csstools/css-parser-algorithms@3.0.4':
     resolution: {integrity: sha512-Up7rBoV77rv29d3uKHUIVubz1BTcgyUK72IvCQAbfbMv584xHcGKCKbWh7i8hPrRJ7qU4Y8IO3IY9m+iTB7P3A==}
@@ -2172,12 +2172,12 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@choptop/argon2-api@0.0.2':
+  '@choptop/argon2-api@0.0.3':
     dependencies:
-      '@choptop/argon2': 0.0.2
+      '@choptop/argon2': 0.0.3
       lodash: 4.17.21
 
-  '@choptop/argon2@0.0.2': {}
+  '@choptop/argon2@0.0.3': {}
 
   '@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3)':
     dependencies:
